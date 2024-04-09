@@ -8,23 +8,23 @@ app.get("/", function(req, res) {
 });
 
 //Route to process the collection of inputs received
-app.get("/result/:arithmetic/:value1/:value2", function(req, res) {
-    const { arithmetic, value1, value2 } = req.params;
+app.get("/result/:arithmetic/:num1/:num2", function(req, res) {
+    const { arithmetic, num1, num2 } = req.params;
    
     let result;
    //adding arithmetic operations accordingly
     switch(arithmetic) {
         case "add":
-            result = parseFloat(value1) + parseFloat(value2);
+            result = parseFloat(num1) + parseFloat(num2);
             break;
         case "subtract":
-            result = parseFloat(value1) - parseFloat(value2);
+            result = parseFloat(num1) - parseFloat(num2);
             break;
         case "multiply":
-            result =parseFloat(value1) *parseFloat(value2);
+            result =parseFloat(num1) * parseFloat(num2);
             break;
         case "divide":
-            result = parseFloat(value1) / parseFloat(value2);
+            result = parseFloat(num1) / parseFloat(num2);
             break;
         default:
             //Returning an error message if something went wrong
