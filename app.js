@@ -26,6 +26,15 @@ app.get("/result/:arithmetic/:num1/:num2", function(req, res) {
         case "divide":
             result = parseFloat(num1) / parseFloat(num2);
             break;
+        case "exponentiate": // New exponentiate operation for task 4.2
+            result = Math.pow(parseFloat(num1), parseFloat(num2));
+            break;
+        case "logarithm": // New logarithmic operation for task 4.2
+                result = Math.log(parseFloat(num1)) / Math.log(parseFloat(num2));
+                break;
+        case "modulo": // New Modulo operation for task 4.2
+            result = parseFloat(num1) % parseFloat(num2);
+        break;
         default:
             //Returning an error message if something went wrong
             return res.status(400).send("Sorry but this contains an invalid operation please try again...");
