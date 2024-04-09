@@ -57,16 +57,16 @@
             arithmetics available are addition, subtraction, multiplication,
             division</p1
         >
-        <!--Java Script code to execute the calculation when it is clicked. It retrieves both of the values written within the text boxes and the "operation" selected. The it constructs a URL with all the inputs collected-->
+        <!--JavaScript code to execute the calculation when the button is clicked. It retrieves both of the values written within the text boxes and the "operation" selected. Then it constructs a URL with all the inputs collected-->
         <script>
             document
                 .getElementById("calculatebutton")
                 .addEventListener("click", function () {
-                    const num1 = document.getElementsByName("value1")[0].value;
-                    const num2 = document.getElementsByName("value2")[0].value;
+                    const num1 = document.getElementsByName("num1")[0].value;
+                    const num2 = document.getElementsByName("num2")[0].value;
                     const arithmetic =
                         document.getElementById("arithmetic").value;
-                    window.location.href = `/result/${arithmetic}/${value1}/${value2}`;
+                    window.location.href = `/result/${arithmetic}/${num1}/${num2}`;
                 });
         </script>
     </body>
